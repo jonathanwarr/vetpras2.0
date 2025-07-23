@@ -1,26 +1,128 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    /* VETPRAS COLOUR PALETTE */
+    --stone-50: #FAFAF9; /* Primary background */
+    --stone-100: #F5F5F4; /* Secondary background */
+    --stone-200: #E7E5E4; /* Tertiary background */
+    --slate-400: #90A2B9; /* Muted text */
+    --slate-600: #45556C; /* Secondary text */
+    --slate-800: #1D283D; /* Primary accent */
+    --slate-900: #0E172B; /* Primary text */
+    --indigo-500: #615FFF; /* Secondary accent */
+    --red-500: #FA2C37; /* Error colour */
+    --amber-500: #FE9900; /* Warning colour */
+    --emerald-500: #00BC7D; /* Success colour */
   }
-}
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+    /* Placeholder styling */
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--slate-400);
+    font-size: inherit;
+    font-weight: inherit;
+  }
+  
+  /* TYPOGRAPHY SYSTEM */
+
+  /* Hero Font */
+  .heading-1 {
+    font-family: var(--font-amiri);
+    font-size: 64px;
+    line-height: 71px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--slate-900);
+  }
+  
+  /* Section Headings */
+  .heading-2 {
+    font-family: var(--font-lora);
+    font-size: 40px;
+    line-height: 44px;
+    font-weight: 600;
+    color: var(--slate-900);
+  }
+  
+  /* Subsection Headings */
+  .heading-3 {
+    font-family: var(--font-lora);
+    font-size: 32px;
+    line-height: 36px;
+    font-weight: 400;
+    color: var(--slate-900);
+  }
+
+  /* Smaller Headings */
+  .heading-4 {
+    font-family: var(--font-lora);
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 600;
+    color: var(--slate-900);
+  }
+
+  /* Subheadings */
+  .subheading {
+    font-family: var(--font-lora);
+    font-size: 20px;
+    line-height: 22px;
+    font-weight: 400;
+    color: var(--slate-900);
+  }
+
+/* Body Text */
+  .body-text {
+    font-family: var(--font-lora);
+    font-size: 18px;
+    line-height: 20px;
+    font-weight: 400;
+    color: var(--slate-900);
+  }
+
+/* Forms & Tables */
+  .small-text-normal {
+    font-family: var(--font-lora);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 400;
+    color: var(--slate-900);
+  }
+
+  /* Form Field Labels */
+  .small-text-semi-boldl {
+    font-family: var(--font-lora);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 600;
+    color: var(--slate-900);
+  }
+
+  /* Table Headers */
+  .small-text-bold {
+    font-family: var(--font-lora);
+    font-size: 14px;
+    line-height: 16px;
+    font-weight: 700;
+    color: var(--slate-900);
+  }
+
+ /* Filter Search */
+  .xsmall-text-normal {
+    font-family: var(--font-lora);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 400;
+    color: var(--slate-900);
+  }
+
+  /* Filter Labels, Icon Subtext */
+  .xsmall-text-semi-bold {
+    font-family: var(--font-lora);
+    font-size: 12px;
+    line-height: 14px;
+    font-weight: 600;
+    color: var(--slate-900);
+  }
 }
