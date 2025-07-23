@@ -1,16 +1,17 @@
 import { Amiri, Lora } from "next/font/google";
 import "./globals.css";
+import "@/lib/fontawesome"; // Add this line
 
 const amiri = Amiri({
   variable: "--font-amiri",
   subsets: ["latin"],
-  weight: ["700"], // Bold weight for H1
+  weight: ["700"],
 });
 
 const lora = Lora({
   variable: "--font-lora",
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"], // All the weights you need
+  weight: ["400", "500", "600", "700"],
 });
 
 export const metadata = {
